@@ -2,7 +2,7 @@ const assert = require('assert')
 const css = require('../lib/css')
 const fs = require('fs')
 const path = require('path')
-// 匹配不是冒号的字符
+
 describe('css parser', function () {
   it('可以匹配出rule', function () {
     const res = css(
@@ -17,7 +17,7 @@ describe('css parser', function () {
       expect
     )
   })
-// 匹配没有分号的字符
+
   it('可以匹配各种选择器', function () {
     const res = css(
       fs.readFileSync(

@@ -53,16 +53,14 @@ module.exports = function (source) {
    */
   function declaration() {
     // TODO: property
-    // let prop = match(/^TODO/)
-    let prop = match(/^\*?[\w-_]+[\w-_0-9]*/)
+    let prop = match(/^TODO/)
     if (!prop) return
 
     // :
     if (!match(/^:\s*/)) throw new Error("property missing ':'")
 
     // TODO: value
-    // let val = match(/^TODO/)
-    let val = match(/^[^;]+/)
+    let val = match(/^TODO/)
 
     var ret = {
       type: 'declaration',
@@ -117,7 +115,7 @@ module.exports = function (source) {
   function rules() {
     let node
     let rules = []
-    // 清除 source 起始空格
+    // q source 起始空格
     whitespace()
     while (source.length && source.charAt(0) != '}' && (node = rule())) {
       if (node !== false) {

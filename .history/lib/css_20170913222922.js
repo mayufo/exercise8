@@ -54,15 +54,15 @@ module.exports = function (source) {
   function declaration() {
     // TODO: property
     // let prop = match(/^TODO/)
-    let prop = match(/^\*?[\w-_]+[\w-_0-9]*/)
+  let prop = match(/^\*?[\w-]/)
     if (!prop) return
 
     // :
     if (!match(/^:\s*/)) throw new Error("property missing ':'")
 
     // TODO: value
-    // let val = match(/^TODO/)
-    let val = match(/^[^;]+/)
+    let val = match(/^TODO/)
+    // let val = match(/^\*?[])
 
     var ret = {
       type: 'declaration',

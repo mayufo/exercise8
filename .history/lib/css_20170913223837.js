@@ -54,7 +54,7 @@ module.exports = function (source) {
   function declaration() {
     // TODO: property
     // let prop = match(/^TODO/)
-    let prop = match(/^\*?[\w-_]+[\w-_0-9]*/)
+    let prop = match(/^\*?[\w]+[\w]*/)
     if (!prop) return
 
     // :

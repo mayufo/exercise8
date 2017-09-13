@@ -17,7 +17,7 @@ describe('css parser', function () {
       expect
     )
   })
-// 匹配没有分号的字符
+
   it('可以匹配各种选择器', function () {
     const res = css(
       fs.readFileSync(
